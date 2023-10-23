@@ -10,5 +10,5 @@ updates:
       patterns:
         - "*"
   target-branch: "dev"
-    labes: 
-    - "dependecies"
+    labels:
+      - "dependecies"
