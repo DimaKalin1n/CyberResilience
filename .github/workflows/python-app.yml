@@ -32,4 +32,4 @@ jobs:
         python -m pip install --upgrade pip
     - name: Analysing the code with pylint
       run: |
-        pylint --disable=all --enable=unused-import $(git ls-files '*.py')
+        pylint $(git ls-files '*.py')

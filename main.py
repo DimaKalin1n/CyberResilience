@@ -11,7 +11,8 @@ env = dotenv_values('.env')
 r = Redis(host='redis', port=env['REDIS_PORT'])
 
 
-@app.route('/docker build -t my_flask_app:v0.1 my_flask_app/')
+#@app.route('/docker build -t my_flask_app:v0.1 my_flask_app/')
+@app.route('/<user_name>')
 def homePage(user_name):
     r.incr(user_name)
     return 'ok'
