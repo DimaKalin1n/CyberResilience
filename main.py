@@ -5,15 +5,16 @@ from dotenv import load_dotenv, dotenv_values
 
 app = Flask(__name__)
 
+
 load_dotenv()
 env = dotenv_values('.env')
+
 
 r = Redis(host='redis', port=env['REDIS_PORT'])
 
 
-#@app.route('/docker build -t my_flask_app:v0.1 my_flask_app/')
 @app.route('/<user_name>')
-def homePage(user_name):
+def home_page(user_name):
     r.incr(user_name)
     return 'ok'
 
