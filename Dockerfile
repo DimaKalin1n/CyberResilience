@@ -1,7 +1,7 @@
 FROM python
-COPY ./info.txt /CYBERRESILIENCE/info.txt
+COPY ./requirements.txt /CYBERRESILIENCE/requirements.txt
 WORKDIR /CYBERRESILIENCE
-RUN pip install -r info.txt
+RUN pip install -r requirements.txt
 COPY . /CYBERRESILIENCE
 ENTRYPOINT ["python"]
 CMD ["main.py"]
