@@ -4,11 +4,9 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "18:01"
+    time: "18:03"
   groups:
     python-packages:
       patterns:
         - "*"
   target-branch: "main"
-  labels:
-    - "dependecies"
