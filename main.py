@@ -1,6 +1,7 @@
 from flask import Flask
 from redis import Redis
 from dotenv import load_dotenv, dotenv_values
+'''Подключение модулей'''
 
 
 app = Flask(__name__)
